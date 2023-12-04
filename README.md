@@ -1,52 +1,63 @@
-# Project Name
-> Outline a brief description of your project.
+# Melanoma Detection using CNN
+> This project is to build a CNN based model which can accurately detect melanoma. Melanoma is a type of cancer that can be deadly if not detected early. It accounts for 75% of skin cancer deaths. A solution which can evaluate images and alert the dermatologists about the presence of melanoma has the potential to reduce a lot of manual effort needed in diagnosis.
+Currently this model, predicts with 88% accuracy.
 
 
 ## Table of Contents
 * [General Info](#general-information)
-* [Technologies Used](#technologies-used)
+* [Observations](#observations)
 * [Conclusions](#conclusions)
-* [Acknowledgements](#acknowledgements)
+* [Technologies](#technologies-used)
 
-<!-- You can include any other section that is pertinent to your problem -->
+
 
 ## General Information
-- Provide general information about your project here.
-- What is the background of your project?
-- What is the business probem that your project is trying to solve?
-- What is the dataset that is being used?
+### Algorithm used
+Convolutional Neural Network
 
-<!-- You don't have to answer all the questions - just the ones relevant to your project. -->
+### About the dataset
+There are total 2357 images which includes 2239 train images and 118 test images.
+
+There are total 9 classes of data as below -
+![classes](output_images/classes.png)
+
+### Steps
+- Data Loading
+- Baseline Model Building
+- Train and test the model
+- Build an augmented model
+- Train the augmented model and test the model
+- Figur out the **Class Imbalance** with augmentor
+- Build the final model
+- Train the final model and test the model
+- Verify the model on test data
+
+## Observations
+### Baseline model -
+![baseline](output_images/initial_accuracy_graph.png)
+
+### Augmented model -
+![augmented](output_images/augmented_accuracy_graph.png)
+
+### Final model -
+![final](output_images/final_accuracy_graph.png)
 
 ## Conclusions
-- Conclusion 1 from the analysis
-- Conclusion 2 from the analysis
-- Conclusion 3 from the analysis
-- Conclusion 4 from the analysis
+- We see that loss decreases when the accuracy increases. The final model after augmentation has an accuracy of `88%` and a loss of `0.4`. The model is able to predict a test image accuractely. 
+- Augmenting the data and countering class imbalance helped in improving the accuracy of the model.
 
-<!-- You don't have to answer all the questions - just the ones relevant to your project. -->
 
 
 ## Technologies Used
-- library - version 1.0
-- library - version 2.0
-- library - version 3.0
-
-<!-- As the libraries versions keep on changing, it is recommended to mention the version of library used in this project -->
-
-## Acknowledgements
-Give credit here.
-- This project was inspired by...
-- References if any...
-- This project was based on [this tutorial](https://www.example.com).
+- Python 3.0
+- Tensorflow
+- keras
+- Augmentor
+- Pandas
+- Matplotlib
+- Numpy
+- Google colab (for initial building)
 
 
 ## Contact
-Created by [@githubusername] - feel free to contact me!
-
-
-<!-- Optional -->
-<!-- ## License -->
-<!-- This project is open source and available under the [... License](). -->
-
-<!-- You don't have to include all sections - just the one's relevant to your project -->
+Created by [@PrasunPK] - feel free to contact me!
